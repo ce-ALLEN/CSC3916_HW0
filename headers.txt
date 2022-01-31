@@ -1,0 +1,31 @@
+Request Headers:
+
+User-Agent: PostmanRuntime/7.29.0   // user agent originating the request
+Accept: */* // accept all media types for the response
+Postman-Token: c8f16253-fa14-4574-84b5-b64b64e22cb3 // token for Postman authentication
+Host: www.googleapis.com    // internet host of the resource being requested
+Accept-Encoding: gzip, deflate, br  // acceptable content-codings in response are gzip, deflate, br
+Connection: keep-alive  // keep the connection alive after the response
+
+Response Headers:
+
+Content-Type: application/json; charset=UTF-8   // media type of the entire body of response is json with UTF-8 encoding
+Vary: Origin    // Vary header fields determine whether a cache is permitted to use the response for a subsequent requst
+Vary: X-Origin  // Origin, X-Origin, Referrer are permitted.  X- headers are discussed below
+Vary: Referer
+Content-Encoding: gzip  // content encoding included in the response is gzip
+Date: Sun, 30 Jan 2022 23:35:51 GMT // date which the message originated
+Server: ESF // server framework
+Cache-Control: private  // private cache control must be obeyed by all caching mechanisms along the request/response chain
+                        // private indicates that response must not be cached by a shared cache
+
+// X- headers are custom headers, the prefix X is used to prevent confusion with standard headers
+X-XSS-Protection: 0 // disable cross site scripting filtering
+X-Frame-Options: SAMEORIGIN // content is only usable in frames by the current domain
+X-Content-Type-Options: nosniff // prevent sniffing
+
+// Alt-Svc header indicates alternative network locations that may be treated as authoritative for future requests
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+    ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+Transfer-Encoding: chunked  // message was transferred in a series of chunks

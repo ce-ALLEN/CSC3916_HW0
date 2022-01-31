@@ -14,7 +14,7 @@ module.exports = async (phrase) => {
         status: results.data,
         statusText: results.statusText,
         headers: results.statusText,
-        requestHeader: results.config.headers
+        requestHeader: (results.config ? results.config.headers : null)
     }
 
     return JSON.stringify(customObject);
